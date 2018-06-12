@@ -52,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
         // TODO: When the activity starts up, look for intent information
         // that may have been passed in from the Notification tap
         if (getIntent().getExtras() != null) {
+
+            // String that will contain each of the keys that were passed in by the intent
+            String launchMsg = "";
+
+            // for loop to get the keySet for each one of the messages
+            for (String key: getIntent().getExtras().keySet()) {
+
+                // Create an object just to hold the value
+                Object val = getIntent().getExtras().get(key);
+
+                Log.d(TAG, "Key: " + key + " Value: " + val + "\n");
+
+                launchMsg += "Key: " + key + " Value: " + val + "\n";
+            }
+
+            tvMsg.setText(launchMsg);
         }
         else {
             tvMsg.setText("No launch information");
