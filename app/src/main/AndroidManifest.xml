@@ -20,6 +20,22 @@
         </activity>
 
         <!-- TODO: Add Firebase Services here -->
+        <service
+            android:name=".FCMDroidMsgService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".FCMInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+
+        </service>
 
 
         <!-- TODO: Specify notification metadata here -->
