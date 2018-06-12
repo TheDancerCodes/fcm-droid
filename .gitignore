@@ -8,4 +8,7 @@
 /captures
 .externalNativeBuild
 
+# Google Services (e.g. APIs or Firebase)
+app/google-services.json
+
 instapk.log*
